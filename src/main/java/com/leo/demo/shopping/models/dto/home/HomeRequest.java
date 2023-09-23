@@ -5,7 +5,7 @@ import com.leo.demo.shopping.models.base.BaseRequest;
 
 /**
  * @author leo
- * @date 2023/1/17
+ * @date 2023/9/24
  */
 public class HomeRequest extends BaseRequest {
 }

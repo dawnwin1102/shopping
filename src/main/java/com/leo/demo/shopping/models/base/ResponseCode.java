@@ -2,7 +2,7 @@ package com.leo.demo.shopping.models.base;
 
 /**
  * @author leo
- * @date 2023/1/17
+ * @date 2023/9/24
  */
 public enum ResponseCode {
     Code_0000("0000", "success"),

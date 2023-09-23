@@ -18,7 +18,7 @@ import org.springframework.web.servlet.mvc.method.annotation.ResponseBodyAdvice;
 public class CommonResponseAdvice implements ResponseBodyAdvice {
     @Override
     public boolean supports(MethodParameter methodParameter, Class aClass) {
-        return true;
+        return !methodParameter.getParameterType().getSimpleName().equals("ResponseEntity");
     }
 
     @Override

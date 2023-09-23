@@ -4,7 +4,7 @@ import com.alibaba.fastjson.JSON;
 
 /**
  * @author leo
- * @date 2023/1/17
+ * @date 2023/9/24
  */
 public class FoodFacilityPageRequest extends PageableRequest {
     @Override

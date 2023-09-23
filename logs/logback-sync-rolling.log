@@ -1208,3 +1208,470 @@ Caused by: java.lang.IllegalArgumentException: Could not resolve placeholder 'mo
 2023-09-22 18:16:03.156 [SpringApplicationShutdownHook] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
 2023-09-22 18:16:03.163 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
 2023-09-22 18:16:03.179 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-09-23 14:30:07.757 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2023-09-23 14:30:07.863 [main] INFO  com.leo.demo.shopping.ShoppingApplication - Starting ShoppingApplication using Java 11.0.17 on C02WQ0ZDHTD5 with PID 84429 (/Users/maox029/Documents/GitHub/shopping/target/classes started by maox029 in /Users/maox029/Documents/GitHub/shopping)
+2023-09-23 14:30:07.869 [main] INFO  com.leo.demo.shopping.ShoppingApplication - No active profile set, falling back to 1 default profile: "default"
+2023-09-23 14:30:10.445 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-23 14:30:10.643 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 164 ms. Found 1 JPA repository interfaces.
+2023-09-23 14:30:11.217 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'shiroConfig' of type [com.leo.demo.shopping.shiro.ShiroConfig$$EnhancerBySpringCGLIB$$7d958333] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-23 14:30:11.564 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'userService' of type [com.leo.demo.shopping.impl.UserService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-23 14:30:11.566 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'userRealm' of type [com.leo.demo.shopping.shiro.UserRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-23 14:30:11.936 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-23 14:30:12.058 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-23 14:30:13.883 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8088 (https)
+2023-09-23 14:30:13.911 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["https-jsse-nio-8088"]
+2023-09-23 14:30:13.912 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2023-09-23 14:30:13.913 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-09-23 14:30:14.161 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-09-23 14:30:14.161 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 6140 ms
+2023-09-23 14:30:15.048 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-23 14:30:15.237 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.14.Final
+2023-09-23 14:30:15.789 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-09-23 14:30:16.072 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.sqlite.hibernate.dialect.SQLiteDialect
+2023-09-23 14:30:16.177 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-09-23 14:30:16.540 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-09-23 14:30:18.285 [main] INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-23 14:30:18.306 [main] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-23 14:30:20.064 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-23 14:30:20.715 [main] INFO  s.d.s.w.WebMvcPropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2023-09-23 14:30:21.922 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["https-jsse-nio-8088"]
+2023-09-23 14:30:22.524 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8088 (https) with context path ''
+2023-09-23 14:30:22.525 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Documentation plugins bootstrapped
+2023-09-23 14:30:22.531 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2023-09-23 14:30:22.579 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2023-09-23 14:30:22.876 [main] INFO  com.leo.demo.shopping.ShoppingApplication - Started ShoppingApplication in 16.32 seconds (JVM running for 18.986)
+2023-09-23 14:30:23.137 [main] INFO  com.leo.demo.shopping.ShoppingApplicationRunner - start initialize data
+2023-09-23 14:30:25.103 [main] INFO  com.leo.demo.shopping.ShoppingApplicationRunner - 477 record has initialize into db.
+2023-09-23 14:31:07.902 [https-jsse-nio-8088-exec-3] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-23 14:31:07.903 [https-jsse-nio-8088-exec-3] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-09-23 14:31:07.905 [https-jsse-nio-8088-exec-3] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2023-09-23 14:31:09.558 [https-jsse-nio-8088-exec-7] INFO  c.y.t.web.interceptor.TLogWebInvokeTimeInterceptor - <0><13400451930605696> [TLOG]开始请求URL[/error],参数为:{}
+2023-09-23 14:31:09.558 [https-jsse-nio-8088-exec-5] INFO  c.y.t.web.interceptor.TLogWebInvokeTimeInterceptor - <0><13400451939321984> [TLOG]开始请求URL[/swagger-resources],参数为:{}
+2023-09-23 14:31:09.605 [https-jsse-nio-8088-exec-7] INFO  com.leo.demo.shopping.advice.CommonResponseAdvice - <0><13400451930605696> Response body:{"code":"0000","message":"success","result":{"timestamp":1695450669585,"status":404,"error":"Not Found","path":"/favicon.ico"},"time":1695450669605} 
+2023-09-23 14:31:09.600 [https-jsse-nio-8088-exec-5] INFO  com.leo.demo.shopping.advice.CommonResponseAdvice - <0><13400451939321984> Response body:{"code":"0000","message":"success","result":[{"location":"/v2/api-docs?group=2.X","name":"2.X","swaggerVersion":"2.0","url":"/v2/api-docs?group=2.X"}],"time":1695450669600} 
+2023-09-23 14:31:09.741 [https-jsse-nio-8088-exec-5] INFO  c.y.t.web.interceptor.TLogWebInvokeTimeInterceptor - <0><13400451939321984> [TLOG]结束URL[/swagger-resources]的调用,耗时为:175毫秒
+2023-09-23 14:31:09.743 [https-jsse-nio-8088-exec-7] INFO  c.y.t.web.interceptor.TLogWebInvokeTimeInterceptor - <0><13400451930605696> [TLOG]结束URL[/error]的调用,耗时为:177毫秒
+2023-09-23 14:31:23.653 [https-jsse-nio-8088-exec-9] INFO  c.y.t.web.interceptor.TLogWebInvokeTimeInterceptor - <0><13400452867901568> [TLOG]开始请求URL[/swagger-resources],参数为:{}
+2023-09-23 14:31:23.655 [https-jsse-nio-8088-exec-9] INFO  com.leo.demo.shopping.advice.CommonResponseAdvice - <0><13400452867901568> Response body:{"code":"0000","message":"success","result":[{"location":"/v2/api-docs?group=2.X","name":"2.X","swaggerVersion":"2.0","url":"/v2/api-docs?group=2.X"}],"time":1695450683655} 
+2023-09-23 14:31:23.656 [https-jsse-nio-8088-exec-9] INFO  c.y.t.web.interceptor.TLogWebInvokeTimeInterceptor - <0><13400452867901568> [TLOG]结束URL[/swagger-resources]的调用,耗时为:2毫秒
+2023-09-23 14:32:36.765 [SpringApplicationShutdownHook] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-23 14:32:36.770 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-09-23 14:32:36.784 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-09-23 14:32:49.500 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2023-09-23 14:32:49.566 [main] INFO  com.leo.demo.shopping.ShoppingApplication - Starting ShoppingApplication using Java 11.0.17 on C02WQ0ZDHTD5 with PID 92168 (/Users/maox029/Documents/GitHub/shopping/target/classes started by maox029 in /Users/maox029/Documents/GitHub/shopping)
+2023-09-23 14:32:49.572 [main] INFO  com.leo.demo.shopping.ShoppingApplication - No active profile set, falling back to 1 default profile: "default"
+2023-09-23 14:32:51.744 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-23 14:32:51.905 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 137 ms. Found 1 JPA repository interfaces.
+2023-09-23 14:32:52.520 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'shiroConfig' of type [com.leo.demo.shopping.shiro.ShiroConfig$$EnhancerBySpringCGLIB$$7d958333] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-23 14:32:52.693 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'userService' of type [com.leo.demo.shopping.impl.UserService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-23 14:32:52.694 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'userRealm' of type [com.leo.demo.shopping.shiro.UserRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-23 14:32:52.846 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-23 14:32:52.924 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-23 14:32:54.063 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8088 (https)
+2023-09-23 14:32:54.087 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["https-jsse-nio-8088"]
+2023-09-23 14:32:54.088 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2023-09-23 14:32:54.088 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-09-23 14:32:54.288 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-09-23 14:32:54.288 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4577 ms
+2023-09-23 14:32:54.761 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-23 14:32:54.899 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.14.Final
+2023-09-23 14:32:55.240 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-09-23 14:32:55.413 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.sqlite.hibernate.dialect.SQLiteDialect
+2023-09-23 14:32:55.496 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-09-23 14:32:55.864 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-09-23 14:32:57.564 [main] INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-23 14:32:57.583 [main] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-23 14:32:59.410 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-23 14:32:59.945 [main] INFO  s.d.s.w.WebMvcPropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2023-09-23 14:33:00.980 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["https-jsse-nio-8088"]
+2023-09-23 14:33:01.592 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8088 (https) with context path ''
+2023-09-23 14:33:01.593 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Documentation plugins bootstrapped
+2023-09-23 14:33:01.600 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2023-09-23 14:33:01.644 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2023-09-23 14:33:02.010 [main] INFO  com.leo.demo.shopping.ShoppingApplication - Started ShoppingApplication in 13.883 seconds (JVM running for 17.187)
+2023-09-23 14:33:02.302 [main] INFO  com.leo.demo.shopping.ShoppingApplicationRunner - start initialize data
+2023-09-23 14:33:04.240 [main] INFO  com.leo.demo.shopping.ShoppingApplicationRunner - 477 record has initialize into db.
+2023-09-23 14:33:06.184 [SpringApplicationShutdownHook] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-23 14:33:06.187 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-09-23 14:33:06.199 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-09-23 14:33:13.955 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2023-09-23 14:33:14.012 [main] INFO  com.leo.demo.shopping.ShoppingApplication - Starting ShoppingApplication using Java 11.0.17 on C02WQ0ZDHTD5 with PID 93212 (/Users/maox029/Documents/GitHub/shopping/target/classes started by maox029 in /Users/maox029/Documents/GitHub/shopping)
+2023-09-23 14:33:14.019 [main] INFO  com.leo.demo.shopping.ShoppingApplication - No active profile set, falling back to 1 default profile: "default"
+2023-09-23 14:33:16.182 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-23 14:33:16.359 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 155 ms. Found 1 JPA repository interfaces.
+2023-09-23 14:33:16.897 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'shiroConfig' of type [com.leo.demo.shopping.shiro.ShiroConfig$$EnhancerBySpringCGLIB$$429a0048] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-23 14:33:17.062 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'userService' of type [com.leo.demo.shopping.impl.UserService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-23 14:33:17.063 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'userRealm' of type [com.leo.demo.shopping.shiro.UserRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-23 14:33:17.290 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-23 14:33:17.385 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-23 14:33:18.615 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8088 (https)
+2023-09-23 14:33:18.637 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["https-jsse-nio-8088"]
+2023-09-23 14:33:18.638 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2023-09-23 14:33:18.639 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-09-23 14:33:18.892 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-09-23 14:33:18.893 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 4745 ms
+2023-09-23 14:33:19.436 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-23 14:33:19.552 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.14.Final
+2023-09-23 14:33:19.996 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-09-23 14:33:20.221 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.sqlite.hibernate.dialect.SQLiteDialect
+2023-09-23 14:33:20.310 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-09-23 14:33:20.671 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-09-23 14:33:22.596 [main] INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-23 14:33:22.617 [main] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-23 14:33:24.487 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-23 14:33:25.066 [main] INFO  s.d.s.w.WebMvcPropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2023-09-23 14:33:26.394 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["https-jsse-nio-8088"]
+2023-09-23 14:33:27.302 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8088 (https) with context path ''
+2023-09-23 14:33:27.304 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Documentation plugins bootstrapped
+2023-09-23 14:33:27.311 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2023-09-23 14:33:27.358 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2023-09-23 14:33:27.890 [main] INFO  com.leo.demo.shopping.ShoppingApplication - Started ShoppingApplication in 15.161 seconds (JVM running for 17.386)
+2023-09-23 14:33:28.253 [main] INFO  com.leo.demo.shopping.ShoppingApplicationRunner - start initialize data
+2023-09-23 14:33:30.337 [main] INFO  com.leo.demo.shopping.ShoppingApplicationRunner - 477 record has initialize into db.
+2023-09-23 14:33:33.713 [https-jsse-nio-8088-exec-9] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-23 14:33:33.713 [https-jsse-nio-8088-exec-9] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-09-23 14:33:33.718 [https-jsse-nio-8088-exec-9] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 5 ms
+2023-09-23 14:33:34.972 [https-jsse-nio-8088-exec-4] INFO  c.y.t.web.interceptor.TLogWebInvokeTimeInterceptor - <0><13400461464979584> [TLOG]开始请求URL[/swagger-resources],参数为:{}
+2023-09-23 14:33:35.092 [https-jsse-nio-8088-exec-4] INFO  c.y.t.web.interceptor.TLogWebInvokeTimeInterceptor - <0><13400461464979584> [TLOG]结束URL[/swagger-resources]的调用,耗时为:77毫秒
+2023-09-23 14:33:51.589 [SpringApplicationShutdownHook] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-23 14:33:51.593 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-09-23 14:33:51.601 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-09-23 14:34:03.299 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2023-09-23 14:34:03.342 [main] INFO  com.leo.demo.shopping.ShoppingApplication - Starting ShoppingApplication using Java 11.0.17 on C02WQ0ZDHTD5 with PID 95431 (/Users/maox029/Documents/GitHub/shopping/target/classes started by maox029 in /Users/maox029/Documents/GitHub/shopping)
+2023-09-23 14:34:03.345 [main] INFO  com.leo.demo.shopping.ShoppingApplication - No active profile set, falling back to 1 default profile: "default"
+2023-09-23 14:34:05.986 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-23 14:34:06.188 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 169 ms. Found 1 JPA repository interfaces.
+2023-09-23 14:34:07.025 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'shiroConfig' of type [com.leo.demo.shopping.shiro.ShiroConfig$$EnhancerBySpringCGLIB$$7d958333] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-23 14:34:07.295 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'userService' of type [com.leo.demo.shopping.impl.UserService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-23 14:34:07.297 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'userRealm' of type [com.leo.demo.shopping.shiro.UserRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-23 14:34:07.464 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-23 14:34:07.559 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-23 14:34:08.832 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8088 (https)
+2023-09-23 14:34:08.864 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["https-jsse-nio-8088"]
+2023-09-23 14:34:08.865 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2023-09-23 14:34:08.866 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-09-23 14:34:09.112 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-09-23 14:34:09.112 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 5610 ms
+2023-09-23 14:34:09.808 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-23 14:34:09.925 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.14.Final
+2023-09-23 14:34:10.328 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-09-23 14:34:10.515 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.sqlite.hibernate.dialect.SQLiteDialect
+2023-09-23 14:34:10.614 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-09-23 14:34:10.992 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-09-23 14:34:13.002 [main] INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-23 14:34:13.026 [main] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-23 14:34:16.726 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-23 14:34:17.707 [main] INFO  s.d.s.w.WebMvcPropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2023-09-23 14:34:20.094 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["https-jsse-nio-8088"]
+2023-09-23 14:34:21.484 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8088 (https) with context path ''
+2023-09-23 14:34:21.486 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Documentation plugins bootstrapped
+2023-09-23 14:34:21.493 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2023-09-23 14:34:21.622 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2023-09-23 14:34:22.387 [main] INFO  com.leo.demo.shopping.ShoppingApplication - Started ShoppingApplication in 20.98 seconds (JVM running for 23.827)
+2023-09-23 14:34:22.854 [main] INFO  com.leo.demo.shopping.ShoppingApplicationRunner - start initialize data
+2023-09-23 14:34:26.002 [main] INFO  com.leo.demo.shopping.ShoppingApplicationRunner - 477 record has initialize into db.
+2023-09-23 14:34:32.778 [https-jsse-nio-8088-exec-9] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-23 14:34:32.778 [https-jsse-nio-8088-exec-9] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-09-23 14:34:32.781 [https-jsse-nio-8088-exec-9] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 3 ms
+2023-09-23 14:34:33.887 [https-jsse-nio-8088-exec-7] INFO  c.y.t.web.interceptor.TLogWebInvokeTimeInterceptor - <0><13400465325967488> [TLOG]开始请求URL[/swagger-resources],参数为:{}
+2023-09-23 14:34:33.986 [https-jsse-nio-8088-exec-7] INFO  c.y.t.web.interceptor.TLogWebInvokeTimeInterceptor - <0><13400465325967488> [TLOG]结束URL[/swagger-resources]的调用,耗时为:94毫秒
+2023-09-23 14:34:48.278 [https-jsse-nio-8088-exec-10] INFO  c.y.t.web.interceptor.TLogWebInvokeTimeInterceptor - <0><13400466278205568> [TLOG]开始请求URL[/home/hi],参数为:{}
+2023-09-23 14:34:48.376 [https-jsse-nio-8088-exec-10] INFO  com.leo.demo.shopping.advice.CommonRequestAdvice - <0><13400466278205568> Request body:{"authInfo":{"visitorModel":false},"isApHolder":0,"swid":""} 
+2023-09-23 14:34:48.458 [https-jsse-nio-8088-exec-10] INFO  c.y.t.web.interceptor.TLogWebInvokeTimeInterceptor - <0><13400466278205568> [TLOG]结束URL[/home/hi]的调用,耗时为:178毫秒
+2023-09-23 14:35:05.353 [SpringApplicationShutdownHook] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-23 14:35:05.356 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-09-23 14:35:05.368 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-09-23 14:35:13.669 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2023-09-23 14:35:13.795 [main] INFO  com.leo.demo.shopping.ShoppingApplication - Starting ShoppingApplication using Java 11.0.17 on C02WQ0ZDHTD5 with PID 98502 (/Users/maox029/Documents/GitHub/shopping/target/classes started by maox029 in /Users/maox029/Documents/GitHub/shopping)
+2023-09-23 14:35:13.798 [main] INFO  com.leo.demo.shopping.ShoppingApplication - No active profile set, falling back to 1 default profile: "default"
+2023-09-23 14:35:16.275 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-23 14:35:16.526 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 229 ms. Found 1 JPA repository interfaces.
+2023-09-23 14:35:17.031 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'shiroConfig' of type [com.leo.demo.shopping.shiro.ShiroConfig$$EnhancerBySpringCGLIB$$84c716c9] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-23 14:35:17.203 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'userService' of type [com.leo.demo.shopping.impl.UserService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-23 14:35:17.205 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'userRealm' of type [com.leo.demo.shopping.shiro.UserRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-23 14:35:17.396 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-23 14:35:17.512 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-23 14:35:18.723 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8088 (https)
+2023-09-23 14:35:18.750 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["https-jsse-nio-8088"]
+2023-09-23 14:35:18.751 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2023-09-23 14:35:18.752 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-09-23 14:35:18.947 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-09-23 14:35:18.947 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 5026 ms
+2023-09-23 14:35:19.428 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-23 14:35:19.545 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.14.Final
+2023-09-23 14:35:19.901 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-09-23 14:35:20.151 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.sqlite.hibernate.dialect.SQLiteDialect
+2023-09-23 14:35:20.228 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-09-23 14:35:20.566 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-09-23 14:35:22.104 [main] INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-23 14:35:22.121 [main] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-23 14:35:24.062 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-23 14:35:24.559 [main] INFO  s.d.s.w.WebMvcPropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2023-09-23 14:35:25.733 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["https-jsse-nio-8088"]
+2023-09-23 14:35:26.521 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8088 (https) with context path ''
+2023-09-23 14:35:26.523 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Documentation plugins bootstrapped
+2023-09-23 14:35:26.530 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2023-09-23 14:35:26.576 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2023-09-23 14:35:27.010 [main] INFO  com.leo.demo.shopping.ShoppingApplication - Started ShoppingApplication in 14.688 seconds (JVM running for 17.098)
+2023-09-23 14:35:27.320 [main] INFO  com.leo.demo.shopping.ShoppingApplicationRunner - start initialize data
+2023-09-23 14:35:29.600 [main] INFO  com.leo.demo.shopping.ShoppingApplicationRunner - 477 record has initialize into db.
+2023-09-23 14:35:41.965 [https-jsse-nio-8088-exec-9] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-23 14:35:41.965 [https-jsse-nio-8088-exec-9] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-09-23 14:35:41.968 [https-jsse-nio-8088-exec-9] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 2 ms
+2023-09-23 14:35:42.986 [https-jsse-nio-8088-exec-1] INFO  c.y.t.web.interceptor.TLogWebInvokeTimeInterceptor - <0><13400469856274560> [TLOG]开始请求URL[/swagger-resources],参数为:{}
+2023-09-23 14:43:13.555 [HikariPool-1 housekeeper] WARN  com.zaxxer.hikari.pool.HikariPool - HikariPool-1 - Thread starvation or clock leap detected (housekeeper delta=7m52s889ms).
+2023-09-23 14:43:13.558 [https-jsse-nio-8088-exec-1] INFO  com.leo.demo.shopping.advice.CommonResponseAdvice - <0><13400469856274560> Response body:{"code":"0000","message":"success","result":[{"location":"/v2/api-docs?group=2.X","name":"2.X","swaggerVersion":"2.0","url":"/v2/api-docs?group=2.X"}],"time":1695451393558} 
+2023-09-23 14:43:13.774 [https-jsse-nio-8088-exec-1] ERROR c.leo.demo.shopping.config.GlobalExceptionHandler - <0><13400469856274560> org.apache.catalina.connector.ClientAbortException: java.io.IOException: Broken pipe
+	at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:310)
+	at org.apache.catalina.connector.OutputBuffer.flush(OutputBuffer.java:273)
+	at org.apache.catalina.connector.CoyoteOutputStream.flush(CoyoteOutputStream.java:118)
+	at java.base/java.io.FilterOutputStream.flush(FilterOutputStream.java:153)
+	at com.fasterxml.jackson.core.json.UTF8JsonGenerator.flush(UTF8JsonGenerator.java:1187)
+	at com.fasterxml.jackson.databind.ObjectWriter.writeValue(ObjectWriter.java:1009)
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.writeInternal(AbstractJackson2HttpMessageConverter.java:456)
+	at org.springframework.http.converter.AbstractGenericHttpMessageConverter.write(AbstractGenericHttpMessageConverter.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor.writeWithMessageConverters(AbstractMessageConverterMethodProcessor.java:290)
+	at org.springframework.web.servlet.mvc.method.annotation.HttpEntityMethodProcessor.handleReturnValue(HttpEntityMethodProcessor.java:219)
+	at org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite.handleReturnValue(HandlerMethodReturnValueHandlerComposite.java:78)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:135)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.invokeHandlerMethod(RequestMappingHandlerAdapter.java:895)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestMappingHandlerAdapter.handleInternal(RequestMappingHandlerAdapter.java:808)
+	at org.springframework.web.servlet.mvc.method.AbstractHandlerMethodAdapter.handle(AbstractHandlerMethodAdapter.java:87)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1071)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:670)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:450)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:891)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1784)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.FileDispatcherImpl.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:47)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:113)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:79)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:50)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:462)
+	at org.apache.tomcat.util.net.SecureNioChannel.flush(SecureNioChannel.java:124)
+	at org.apache.tomcat.util.net.SecureNioChannel.write(SecureNioChannel.java:824)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.doWrite(NioEndpoint.java:1424)
+	at org.apache.tomcat.util.net.SocketWrapperBase.doWrite(SocketWrapperBase.java:768)
+	at org.apache.tomcat.util.net.SocketWrapperBase.flushBlocking(SocketWrapperBase.java:732)
+	at org.apache.tomcat.util.net.SocketWrapperBase.flush(SocketWrapperBase.java:716)
+	at org.apache.coyote.http11.Http11OutputBuffer$SocketOutputBuffer.flush(Http11OutputBuffer.java:573)
+	at org.apache.coyote.http11.filters.ChunkedOutputFilter.flush(ChunkedOutputFilter.java:157)
+	at org.apache.coyote.http11.Http11OutputBuffer.flush(Http11OutputBuffer.java:221)
+	at org.apache.coyote.http11.Http11Processor.flush(Http11Processor.java:1253)
+	at org.apache.coyote.AbstractProcessor.action(AbstractProcessor.java:402)
+	at org.apache.coyote.Response.action(Response.java:209)
+	at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:306)
+	... 72 more
+
+2023-09-23 14:43:13.783 [https-jsse-nio-8088-exec-1] INFO  com.leo.demo.shopping.advice.CommonResponseAdvice - <0><13400469856274560> Response body:{"code":"1000","message":"server error","time":1695451393778} 
+2023-09-23 14:43:13.792 [https-jsse-nio-8088-exec-1] WARN  o.s.w.s.m.m.a.ExceptionHandlerExceptionResolver - <0><13400469856274560> Failure in @ExceptionHandler com.leo.demo.shopping.config.GlobalExceptionHandler#handleException(Exception)
+org.apache.catalina.connector.ClientAbortException: java.io.IOException: Broken pipe
+	at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:310)
+	at org.apache.catalina.connector.OutputBuffer.flush(OutputBuffer.java:273)
+	at org.apache.catalina.connector.CoyoteOutputStream.flush(CoyoteOutputStream.java:118)
+	at java.base/java.io.FilterOutputStream.flush(FilterOutputStream.java:153)
+	at com.fasterxml.jackson.core.json.UTF8JsonGenerator.flush(UTF8JsonGenerator.java:1187)
+	at com.fasterxml.jackson.databind.ObjectWriter.writeValue(ObjectWriter.java:1009)
+	at org.springframework.http.converter.json.AbstractJackson2HttpMessageConverter.writeInternal(AbstractJackson2HttpMessageConverter.java:456)
+	at org.springframework.http.converter.AbstractGenericHttpMessageConverter.write(AbstractGenericHttpMessageConverter.java:104)
+	at org.springframework.web.servlet.mvc.method.annotation.AbstractMessageConverterMethodProcessor.writeWithMessageConverters(AbstractMessageConverterMethodProcessor.java:290)
+	at org.springframework.web.servlet.mvc.method.annotation.RequestResponseBodyMethodProcessor.handleReturnValue(RequestResponseBodyMethodProcessor.java:183)
+	at org.springframework.web.method.support.HandlerMethodReturnValueHandlerComposite.handleReturnValue(HandlerMethodReturnValueHandlerComposite.java:78)
+	at org.springframework.web.servlet.mvc.method.annotation.ServletInvocableHandlerMethod.invokeAndHandle(ServletInvocableHandlerMethod.java:135)
+	at org.springframework.web.servlet.mvc.method.annotation.ExceptionHandlerExceptionResolver.doResolveHandlerMethodException(ExceptionHandlerExceptionResolver.java:428)
+	at org.springframework.web.servlet.handler.AbstractHandlerMethodExceptionResolver.doResolveException(AbstractHandlerMethodExceptionResolver.java:75)
+	at org.springframework.web.servlet.handler.AbstractHandlerExceptionResolver.resolveException(AbstractHandlerExceptionResolver.java:142)
+	at org.springframework.web.servlet.handler.HandlerExceptionResolverComposite.resolveException(HandlerExceptionResolverComposite.java:80)
+	at org.springframework.web.servlet.DispatcherServlet.processHandlerException(DispatcherServlet.java:1331)
+	at org.springframework.web.servlet.DispatcherServlet.processDispatchResult(DispatcherServlet.java:1142)
+	at org.springframework.web.servlet.DispatcherServlet.doDispatch(DispatcherServlet.java:1088)
+	at org.springframework.web.servlet.DispatcherServlet.doService(DispatcherServlet.java:964)
+	at org.springframework.web.servlet.FrameworkServlet.processRequest(FrameworkServlet.java:1006)
+	at org.springframework.web.servlet.FrameworkServlet.doGet(FrameworkServlet.java:898)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:670)
+	at org.springframework.web.servlet.FrameworkServlet.service(FrameworkServlet.java:883)
+	at javax.servlet.http.HttpServlet.service(HttpServlet.java:779)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:227)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.tomcat.websocket.server.WsFilter.doFilter(WsFilter.java:53)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:61)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AdviceFilter.executeChain(AdviceFilter.java:108)
+	at org.apache.shiro.web.servlet.AdviceFilter.doFilterInternal(AdviceFilter.java:137)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.shiro.web.servlet.ProxiedFilterChain.doFilter(ProxiedFilterChain.java:66)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.executeChain(AbstractShiroFilter.java:450)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter$1.call(AbstractShiroFilter.java:365)
+	at org.apache.shiro.subject.support.SubjectCallable.doCall(SubjectCallable.java:90)
+	at org.apache.shiro.subject.support.SubjectCallable.call(SubjectCallable.java:83)
+	at org.apache.shiro.subject.support.DelegatingSubject.execute(DelegatingSubject.java:387)
+	at org.apache.shiro.web.servlet.AbstractShiroFilter.doFilterInternal(AbstractShiroFilter.java:362)
+	at org.apache.shiro.web.servlet.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:125)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.RequestContextFilter.doFilterInternal(RequestContextFilter.java:100)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.FormContentFilter.doFilterInternal(FormContentFilter.java:93)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.springframework.web.filter.CharacterEncodingFilter.doFilterInternal(CharacterEncodingFilter.java:201)
+	at org.springframework.web.filter.OncePerRequestFilter.doFilter(OncePerRequestFilter.java:117)
+	at org.apache.catalina.core.ApplicationFilterChain.internalDoFilter(ApplicationFilterChain.java:189)
+	at org.apache.catalina.core.ApplicationFilterChain.doFilter(ApplicationFilterChain.java:162)
+	at org.apache.catalina.core.StandardWrapperValve.invoke(StandardWrapperValve.java:177)
+	at org.apache.catalina.core.StandardContextValve.invoke(StandardContextValve.java:97)
+	at org.apache.catalina.authenticator.AuthenticatorBase.invoke(AuthenticatorBase.java:541)
+	at org.apache.catalina.core.StandardHostValve.invoke(StandardHostValve.java:135)
+	at org.apache.catalina.valves.ErrorReportValve.invoke(ErrorReportValve.java:92)
+	at org.apache.catalina.core.StandardEngineValve.invoke(StandardEngineValve.java:78)
+	at org.apache.catalina.connector.CoyoteAdapter.service(CoyoteAdapter.java:360)
+	at org.apache.coyote.http11.Http11Processor.service(Http11Processor.java:399)
+	at org.apache.coyote.AbstractProcessorLight.process(AbstractProcessorLight.java:65)
+	at org.apache.coyote.AbstractProtocol$ConnectionHandler.process(AbstractProtocol.java:891)
+	at org.apache.tomcat.util.net.NioEndpoint$SocketProcessor.doRun(NioEndpoint.java:1784)
+	at org.apache.tomcat.util.net.SocketProcessorBase.run(SocketProcessorBase.java:49)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor.runWorker(ThreadPoolExecutor.java:1191)
+	at org.apache.tomcat.util.threads.ThreadPoolExecutor$Worker.run(ThreadPoolExecutor.java:659)
+	at org.apache.tomcat.util.threads.TaskThread$WrappingRunnable.run(TaskThread.java:61)
+	at java.base/java.lang.Thread.run(Thread.java:829)
+Caused by: java.io.IOException: Broken pipe
+	at java.base/sun.nio.ch.FileDispatcherImpl.write0(Native Method)
+	at java.base/sun.nio.ch.SocketDispatcher.write(SocketDispatcher.java:47)
+	at java.base/sun.nio.ch.IOUtil.writeFromNativeBuffer(IOUtil.java:113)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:79)
+	at java.base/sun.nio.ch.IOUtil.write(IOUtil.java:50)
+	at java.base/sun.nio.ch.SocketChannelImpl.write(SocketChannelImpl.java:462)
+	at org.apache.tomcat.util.net.SecureNioChannel.flush(SecureNioChannel.java:124)
+	at org.apache.tomcat.util.net.SecureNioChannel.write(SecureNioChannel.java:797)
+	at org.apache.tomcat.util.net.NioEndpoint$NioSocketWrapper.doWrite(NioEndpoint.java:1424)
+	at org.apache.tomcat.util.net.SocketWrapperBase.doWrite(SocketWrapperBase.java:768)
+	at org.apache.tomcat.util.net.SocketWrapperBase.flushBlocking(SocketWrapperBase.java:732)
+	at org.apache.tomcat.util.net.SocketWrapperBase.flush(SocketWrapperBase.java:716)
+	at org.apache.coyote.http11.Http11OutputBuffer$SocketOutputBuffer.flush(Http11OutputBuffer.java:573)
+	at org.apache.coyote.http11.filters.ChunkedOutputFilter.flush(ChunkedOutputFilter.java:157)
+	at org.apache.coyote.http11.Http11OutputBuffer.flush(Http11OutputBuffer.java:221)
+	at org.apache.coyote.http11.Http11Processor.flush(Http11Processor.java:1253)
+	at org.apache.coyote.AbstractProcessor.action(AbstractProcessor.java:402)
+	at org.apache.coyote.Response.action(Response.java:209)
+	at org.apache.catalina.connector.OutputBuffer.doFlush(OutputBuffer.java:306)
+	... 75 common frames omitted
+2023-09-23 14:43:13.803 [https-jsse-nio-8088-exec-1] INFO  c.y.t.web.interceptor.TLogWebInvokeTimeInterceptor - <0><13400469856274560> [TLOG]结束URL[/swagger-resources]的调用,耗时为:450798毫秒
+2023-09-23 14:43:13.884 [SpringApplicationShutdownHook] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-23 14:43:13.887 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-09-23 14:43:13.894 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2023-09-23 14:43:27.871 [background-preinit] INFO  org.hibernate.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.5.Final
+2023-09-23 14:43:27.972 [main] INFO  com.leo.demo.shopping.ShoppingApplication - Starting ShoppingApplication using Java 11.0.17 on C02WQ0ZDHTD5 with PID 24475 (/Users/maox029/Documents/GitHub/shopping/target/classes started by maox029 in /Users/maox029/Documents/GitHub/shopping)
+2023-09-23 14:43:27.975 [main] INFO  com.leo.demo.shopping.ShoppingApplication - No active profile set, falling back to 1 default profile: "default"
+2023-09-23 14:43:30.299 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2023-09-23 14:43:30.552 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 225 ms. Found 1 JPA repository interfaces.
+2023-09-23 14:43:31.148 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'shiroConfig' of type [com.leo.demo.shopping.shiro.ShiroConfig$$EnhancerBySpringCGLIB$$7655c6a7] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-23 14:43:31.370 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'userService' of type [com.leo.demo.shopping.impl.UserService] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-23 14:43:31.371 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'userRealm' of type [com.leo.demo.shopping.shiro.UserRealm] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-23 14:43:31.530 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'securityManager' of type [org.apache.shiro.web.mgt.DefaultWebSecurityManager] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-23 14:43:31.670 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'authorizationAttributeSourceAdvisor' of type [org.apache.shiro.spring.security.interceptor.AuthorizationAttributeSourceAdvisor] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2023-09-23 14:43:33.283 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8088 (https)
+2023-09-23 14:43:33.311 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["https-jsse-nio-8088"]
+2023-09-23 14:43:33.313 [main] INFO  org.apache.catalina.core.StandardService - Starting service [Tomcat]
+2023-09-23 14:43:33.313 [main] INFO  org.apache.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.70]
+2023-09-23 14:43:33.544 [main] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2023-09-23 14:43:33.544 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 5470 ms
+2023-09-23 14:43:34.151 [main] INFO  org.hibernate.jpa.internal.util.LogHelper - HHH000204: Processing PersistenceUnitInfo [name: default]
+2023-09-23 14:43:34.317 [main] INFO  org.hibernate.Version - HHH000412: Hibernate ORM core version 5.6.14.Final
+2023-09-23 14:43:34.730 [main] INFO  org.hibernate.annotations.common.Version - HCANN000001: Hibernate Commons Annotations {5.1.2.Final}
+2023-09-23 14:43:34.941 [main] INFO  org.hibernate.dialect.Dialect - HHH000400: Using dialect: org.sqlite.hibernate.dialect.SQLiteDialect
+2023-09-23 14:43:35.021 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2023-09-23 14:43:35.360 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2023-09-23 14:43:37.166 [main] INFO  o.h.e.t.jta.platform.internal.JtaPlatformInitiator - HHH000490: Using JtaPlatform implementation: [org.hibernate.engine.transaction.jta.platform.internal.NoJtaPlatform]
+2023-09-23 14:43:37.190 [main] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Initialized JPA EntityManagerFactory for persistence unit 'default'
+2023-09-23 14:43:39.876 [main] WARN  o.s.b.a.o.j.JpaBaseConfiguration$JpaWebConfiguration - spring.jpa.open-in-view is enabled by default. Therefore, database queries may be performed during view rendering. Explicitly configure spring.jpa.open-in-view to disable this warning
+2023-09-23 14:43:41.369 [main] INFO  s.d.s.w.WebMvcPropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2ControllerWebMvc#getDocumentation(String, HttpServletRequest)]
+2023-09-23 14:43:44.328 [main] INFO  org.apache.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["https-jsse-nio-8088"]
+2023-09-23 14:43:45.960 [main] INFO  o.s.boot.web.embedded.tomcat.TomcatWebServer - Tomcat started on port(s): 8088 (https) with context path ''
+2023-09-23 14:43:45.961 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Documentation plugins bootstrapped
+2023-09-23 14:43:45.971 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2023-09-23 14:43:46.066 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2023-09-23 14:43:46.565 [main] INFO  com.leo.demo.shopping.ShoppingApplication - Started ShoppingApplication in 19.997 seconds (JVM running for 22.899)
+2023-09-23 14:43:47.080 [main] INFO  com.leo.demo.shopping.ShoppingApplicationRunner - start initialize data
+2023-09-23 14:43:50.421 [main] INFO  com.leo.demo.shopping.ShoppingApplicationRunner - 477 record has initialize into db.
+2023-09-23 14:43:53.501 [https-jsse-nio-8088-exec-9] INFO  o.a.c.core.ContainerBase.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2023-09-23 14:43:53.502 [https-jsse-nio-8088-exec-9] INFO  org.springframework.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2023-09-23 14:43:53.503 [https-jsse-nio-8088-exec-9] INFO  org.springframework.web.servlet.DispatcherServlet - Completed initialization in 1 ms
+2023-09-23 14:43:54.961 [https-jsse-nio-8088-exec-3] INFO  c.y.t.web.interceptor.TLogWebInvokeTimeInterceptor - <0><13400502096840832> [TLOG]开始请求URL[/swagger-resources],参数为:{}
+2023-09-23 14:43:55.140 [https-jsse-nio-8088-exec-3] INFO  c.y.t.web.interceptor.TLogWebInvokeTimeInterceptor - <0><13400502096840832> [TLOG]结束URL[/swagger-resources]的调用,耗时为:172毫秒
+2023-09-23 14:44:02.321 [https-jsse-nio-8088-exec-4] INFO  c.y.t.web.interceptor.TLogWebInvokeTimeInterceptor - <0><13400502587967616> [TLOG]开始请求URL[/home/hi],参数为:{}
+2023-09-23 14:44:02.399 [https-jsse-nio-8088-exec-4] INFO  com.leo.demo.shopping.advice.CommonRequestAdvice - <0><13400502587967616> Request body:{"authInfo":{"visitorModel":false},"isApHolder":0,"swid":""} 
+2023-09-23 14:44:02.489 [https-jsse-nio-8088-exec-4] INFO  com.leo.demo.shopping.advice.CommonResponseAdvice - <0><13400502587967616> Response body:{"code":"0000","message":"success","result":{"replay":"hello"},"time":1695451442488} 
+2023-09-23 14:44:02.509 [https-jsse-nio-8088-exec-4] INFO  c.y.t.web.interceptor.TLogWebInvokeTimeInterceptor - <0><13400502587967616> [TLOG]结束URL[/home/hi]的调用,耗时为:187毫秒
+2023-09-23 14:44:10.337 [https-jsse-nio-8088-exec-2] INFO  c.y.t.web.interceptor.TLogWebInvokeTimeInterceptor - <0><13400503113304192> [TLOG]开始请求URL[/food/list],参数为:{}
+2023-09-23 14:44:10.343 [https-jsse-nio-8088-exec-2] INFO  com.leo.demo.shopping.advice.CommonRequestAdvice - <0><13400503113304192> Request body:{"authInfo":{"visitorModel":false},"isApHolder":0,"page":0,"size":0,"swid":""} 
+2023-09-23 14:44:10.528 [https-jsse-nio-8088-exec-2] INFO  com.leo.demo.shopping.advice.CommonResponseAdvice - <0><13400503113304192> Response body:{"code":"400","message":"size should be in 10 to 100","result":["size should be in 10 to 100"],"time":1695451450526} 
+2023-09-23 14:44:10.531 [https-jsse-nio-8088-exec-2] INFO  c.y.t.web.interceptor.TLogWebInvokeTimeInterceptor - <0><13400503113304192> [TLOG]结束URL[/food/list]的调用,耗时为:193毫秒
+2023-09-23 14:44:15.592 [https-jsse-nio-8088-exec-3] INFO  c.y.t.web.interceptor.TLogWebInvokeTimeInterceptor - <0><13400503457695872> [TLOG]开始请求URL[/food/list],参数为:{}
+2023-09-23 14:44:15.593 [https-jsse-nio-8088-exec-3] INFO  com.leo.demo.shopping.advice.CommonRequestAdvice - <0><13400503457695872> Request body:{"authInfo":{"visitorModel":false},"isApHolder":0,"page":0,"size":10,"swid":""} 
+2023-09-23 14:44:15.697 [https-jsse-nio-8088-exec-3] INFO  com.leo.demo.shopping.advice.CommonResponseAdvice - <0><13400503457695872> Response body:{"code":"0000","message":"success","result":{"content":[{"address":"3750 18TH ST","applicant":"The Geez Freeze","approved":"2022-01-28T00:00:00","block":"3579","blockLot":"3579006","cnn":887000,"daysHours":"","expirationDate":"2022-11-15T00:00:00","facilityType":"Truck","firePreventionDistricts":8,"foodItems":"Snow Cones: Soft Serve Ice Cream & Frozen Virgin Daiquiris","id":1,"latitude":37.76201920035647,"location":"(37.76201920035647, -122.42730642251331)","locationDescription":"18TH ST: DOLORES ST to CHURCH ST (3700 - 3799)","locationId":1571753,"longitude":-122.42730642251331,"lot":"006","noiSent":"","oldNeighborhoods":3,"permit":"21MFF-00015","policeDistricts":4,"priorPermit":0,"received":"2021-03-15","schedule":"http://bsm.sfdpw.org/PermitsTracker/reports/report.aspx?title=schedule&report=rptSchedule&params=permit=21MFF-00015&ExportPDF=1&Filename=21MFF-00015_schedule.pdf","status":"APPROVED","supervisorDistricts":5,"x":6004575.869,"y":2105666.974,"zipCodes":28862},{"address":"101 CALIFORNIA ST","applicant":"MOMO INNOVATION LLC","approved":"2021-10-22T00:00:00","block":"0263","blockLot":"0263011","cnn":3525000,"daysHours":"","expirationDate":"2022-11-15T00:00:00","facilityType":"Truck","firePreventionDistricts":4,"foodItems":"MOMO Spicy Noodle: POPO's Noodle: Spicy Chicken Noodle: Rice Noodles","id":2,"latitude":37.792948952834664,"location":"(37.792948952834664, -122.39809861316652)","locationDescription":"CALIFORNIA ST: DAVIS ST to FRONT ST (100 - 199)","locationId":1565571,"longitude":-122.39809861316652,"lot":"011","noiSent":"","oldNeighborhoods":6,"permit":"21MFF-00089","policeDistricts":1,"priorPermit":0,"received":"2021-10-22","schedule":"http://bsm.sfdpw.org/PermitsTracker/reports/report.aspx?title=schedule&report=rptSchedule&params=permit=21MFF-00089&ExportPDF=1&Filename=21MFF-00089_schedule.pdf","status":"APPROVED","supervisorDistricts":10,"x":6013245.668,"y":2116754.292,"zipCodes":28860},{"address":"1 MONTGOMERY ST","applicant":"Treats by the Bay LLC","approved":"2021-10-22T00:00:00","block":"0292","blockLot":"0292002","cnn":10624001,"daysHours":"","expirationDate":"2022-11-15T00:00:00","facilityType":"Truck","firePreventionDistricts":4,"foodItems":"Sandwich: Donuts: Coffee: Soft Serve Ice Cream: Drinks","id":3,"latitude":37.78924953407508,"location":"(37.78924953407508, -122.40241859729358)","locationDescription":"POST ST: MONTGOMERY ST to LICK PL (1 - 40)","locationId":1565954,"longitude":-122.40241859729358,"lot":"002","noiSent":"","oldNeighborhoods":6,"permit":"21MFF-00094","policeDistricts":1,"priorPermit":0,"received":"2021-10-22","schedule":"http://bsm.sfdpw.org/PermitsTracker/reports/report.aspx?title=schedule&report=rptSchedule&params=permit=21MFF-00094&ExportPDF=1&Filename=21MFF-00094_schedule.pdf","status":"APPROVED","supervisorDistricts":10,"x":6011970.278,"y":2115432.874,"zipCodes":28854},{"address":"667 MISSION ST","applicant":"MOMO INNOVATION LLC","approved":"2021-10-22T00:00:00","block":"3722","blockLot":"3722067","cnn":9094000,"daysHours":"","expirationDate":"2022-11-15T00:00:00","facilityType":"Truck","firePreventionDistricts":12,"foodItems":"Noodles: Meat & Drinks","id":4,"latitude":37.7865580501799,"location":"(37.7865580501799, -122.40103337534973)","locationDescription":"MISSION ST: ANNIE ST to 03RD ST (663 - 699)","locationId":1565594,"longitude":-122.40103337534973,"lot":"067","noiSent":"","oldNeighborhoods":6,"permit":"21MFF-00090","policeDistricts":2,"priorPermit":0,"received":"2021-10-22","schedule":"http://bsm.sfdpw.org/PermitsTracker/reports/report.aspx?title=schedule&report=rptSchedule&params=permit=21MFF-00090&ExportPDF=1&Filename=21MFF-00090_schedule.pdf","status":"APPROVED","supervisorDistricts":9,"x":6012350.571,"y":2114444.914,"zipCodes":28855},{"address":"5 THE EMBARCADERO","applicant":"Ziaurehman Amini","block":"0234","blockLot":"0234017","cnn":30727000,"daysHours":"","expirationDate":"2016-03-15T00:00:00","facilityType":"Push Cart","firePreventionDistricts":4,"foodItems":"","id":5,"latitude":37.794331003246846,"location":"(37.794331003246846, -122.39581105302317)","locationDescription":"MARKET ST: DRUMM ST intersection","locationId":735318,"longitude":-122.39581105302317,"lot":"017","noiSent":"","oldNeighborhoods":6,"permit":"15MFF-0159","policeDistricts":1,"priorPermit":0,"received":"2015-12-31","schedule":"http://bsm.sfdpw.org/PermitsTracker/reports/report.aspx?title=schedule&report=rptSchedule&params=permit=15MFF-0159&ExportPDF=1&Filename=15MFF-0159_schedule.pdf","status":"REQUESTED","supervisorDistricts":10,"x":6013916.72,"y":2117244.027,"zipCodes":28855},{"address":"120 ELLIS ST","applicant":"Treats by the Bay LLC","approved":"2021-10-22T00:00:00","block":"0326","blockLot":"0326005","cnn":5170000,"daysHours":"","expirationDate":"2022-11-15T00:00:00","facilityType":"Truck","firePreventionDistricts":14,"foodItems":"Prepackaged Kettlecorn","id":6,"latitude":37.78561008636915,"location":"(37.78561008636915, -122.40815476434545)","locationDescription":"ELLIS ST: POWELL ST to CYRIL MAGNIN ST (100 - 148)","locationId":1565628,"longitude":-122.40815476434545,"lot":"005","noiSent":"","oldNeighborhoods":36,"permit":"21MFF-00093","policeDistricts":10,"priorPermit":0,"received":"2021-10-22","schedule":"http://bsm.sfdpw.org/PermitsTracker/reports/report.aspx?title=schedule&report=rptSchedule&params=permit=21MFF-00093&ExportPDF=1&Filename=21MFF-00093_schedule.pdf","status":"APPROVED","supervisorDistricts":10,"x":6010286.046,"y":2114141.69,"zipCodes":28852},{"address":"345 WILLIAMS AVE","applicant":"San Francisco Taco Truck","block":"5423A","blockLot":"5423A009","cnn":13660000,"daysHours":"","expirationDate":"2022-11-15T00:00:00","facilityType":"Truck","firePreventionDistricts":10,"foodItems":"Tacos: Tortas: Burritos","id":7,"latitude":37.72980548057414,"location":"(37.72980548057414, -122.39924710472444)","locationDescription":"WILLIAMS AVE: APOLLO ST to PHELPS ST  VESTA ST (300 - 399)","locationId":1612646,"longitude":-122.39924710472444,"lot":"009","noiSent":"","oldNeighborhoods":1,"permit":"22MFF-00030","policeDistricts":3,"priorPermit":0,"received":"2022-04-21","schedule":"http://bsm.sfdpw.org/PermitsTracker/reports/report.aspx?title=schedule&report=rptSchedule&params=permit=22MFF-00030&ExportPDF=1&Filename=22MFF-00030_schedule.pdf","status":"REQUESTED","supervisorDistricts":8,"x":6012447.306,"y":2093773.934,"zipCodes":58},{"address":"2155 37TH AVE","applicant":"Sunset Mercantile/Outer Sunset Farmers Market & Mercantile","block":"2094","blockLot":"2094006","cnn":1835000,"daysHours":"","expirationDate":"2022-11-15T00:00:00","facilityType":"Truck","firePreventionDistricts":1,"foodItems":"Multiple Food Trucks & Food Types","id":8,"latitude":37.74732654654123,"location":"(37.74732654654123, -122.49628067270531)","locationDescription":"37TH AVE: QUINTARA ST to RIVERA ST (2100 - 2199)","locationId":1612654,"longitude":-122.49628067270531,"lot":"006","noiSent":"","oldNeighborhoods":35,"permit":"22MFF-00031","policeDistricts":8,"priorPermit":0,"received":"2022-04-21","schedule":"http://bsm.sfdpw.org/PermitsTracker/reports/report.aspx?title=schedule&report=rptSchedule&params=permit=22MFF-00031&ExportPDF=1&Filename=22MFF-00031_schedule.pdf","status":"REQUESTED","supervisorDistricts":3,"x":5984527.62,"y":2100736.237,"zipCodes":29491},{"address":"2590 MARIN ST","applicant":"DO UC US Mobile Catering","approved":"2021-11-19T00:00:00","block":"4339","blockLot":"4339008","cnn":8700000,"daysHours":"","expirationDate":"2022-11-15T00:00:00","facilityType":"Truck","firePreventionDistricts":10,"foodItems":"Cold truck: sandwiches: salads: beverages: chips: candy: cookies: coffee: tea: drinks","id":9,"latitude":37.74837582577795,"location":"(37.74837582577795, -122.40320062649582)","locationDescription":"MARIN ST: KANSAS ST to HWY 101 N ON RAMP (2500 - 2599)","locationId":1571649,"longitude":-122.40320062649582,"lot":"008","noiSent":"","oldNeighborhoods":1,"permit":"21MFF-00107","policeDistricts":3,"priorPermit":1,"received":"2021-11-12","schedule":"http://bsm.sfdpw.org/PermitsTracker/reports/report.aspx?title=schedule&report=rptSchedule&params=permit=21MFF-00107&ExportPDF=1&Filename=21MFF-00107_schedule.pdf","status":"APPROVED","supervisorDistricts":8,"x":6011441.697,"y":2100557.577,"zipCodes":58},{"address":"602 MISSION ST","applicant":"Truly Food & More","approved":"2022-02-09T00:00:00","block":"3707","blockLot":"3707013","cnn":9092000,"daysHours":"","expirationDate":"2022-11-15T00:00:00","facilityType":"Truck","firePreventionDistricts":12,"foodItems":"Latin Food: Tacos: Pupusas: Vegetables: Salad: Waters: Sodas","id":10,"latitude":37.78797328321604,"location":"(37.78797328321604, -122.40018504988889)","locationDescription":"MISSION ST: 02ND ST to NEW MONTGOMERY ST (600 - 634)","locationId":1591821,"longitude":-122.40018504988889,"lot":"013","noiSent":"","oldNeighborhoods":6,"permit":"22MFF-00019","policeDistricts":2,"priorPermit":1,"received":"2022-01-26","schedule":"http://bsm.sfdpw.org/PermitsTracker/reports/report.aspx?title=schedule&report=rptSchedule&params=permit=22MFF-00019&ExportPDF=1&Filename=22MFF-00019_schedule.pdf","status":"APPROVED","supervisorDistricts":9,"x":6012606.129,"y":2114955.147,"zipCodes":28855}],"empty":false,"first":true,"last":false,"number":0,"numberOfElements":10,"pageable":{"offset":0,"pageNumber":0,"pageSize":10,"paged":true,"sort":{"empty":true,"sorted":false,"unsorted":true},"unpaged":false},"size":10,"sort":{"$ref":"$.result.pageable.sort"},"totalElements":477,"totalPages":48},"time":1695451455697} 
+2023-09-23 14:44:15.774 [https-jsse-nio-8088-exec-3] INFO  c.y.t.web.interceptor.TLogWebInvokeTimeInterceptor - <0><13400503457695872> [TLOG]结束URL[/food/list]的调用,耗时为:182毫秒
+2023-09-23 15:04:38.866 [SpringApplicationShutdownHook] INFO  o.s.orm.jpa.LocalContainerEntityManagerFactoryBean - Closing JPA EntityManagerFactory for persistence unit 'default'
+2023-09-23 15:04:38.886 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2023-09-23 15:04:39.016 [SpringApplicationShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

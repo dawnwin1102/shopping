@@ -11,7 +11,7 @@ import java.util.Optional;
 
 /**
  * @author leo
- * @date 2023/1/17
+ * @date 2023/9/24
  */
 @Repository
 public interface FoodFacilityRepository extends JpaRepository<FoodFacility, Integer>, JpaSpecificationExecutor<FoodFacility> {
