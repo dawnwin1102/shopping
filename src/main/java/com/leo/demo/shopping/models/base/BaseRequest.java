@@ -13,17 +13,11 @@ import lombok.Data;
 @JsonIgnoreProperties(ignoreUnknown = true)
 @Data
 public class BaseRequest {
-    private String swid = "";
-    private Integer isApHolder;
     @JsonIgnore
     private ShdrAuthInfo authInfo = new ShdrAuthInfo();
     @Data
     public class ShdrAuthInfo {
         @ApiModelProperty("Open ID：when pay channel = wechatpay public account or  jsapi, openId is required")
-        private String openId;
-        private boolean isVisitorModel;
-        private String shdrVisitorId;
-        private String platform;
         private String sessionId;
         private String accessToken;
     }

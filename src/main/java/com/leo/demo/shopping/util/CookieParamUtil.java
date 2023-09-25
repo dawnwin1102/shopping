@@ -69,17 +69,17 @@ public class CookieParamUtil {
 
 
     public static void setGeneralInfo(BaseRequest baseRequest, ProfileAuthParams params) {
-        if (StrUtil.isBlank(params.getShdrVisitorModelFlag())
-                && StrUtil.isNotBlank(params.getActiveSessionId())) {
-            baseRequest.getAuthInfo().setVisitorModel(false);
-        } else {
-            baseRequest.getAuthInfo().setVisitorModel("1".equals(params.getShdrVisitorModelFlag()));
-        }
-        log.info("VisitorModel:{}", baseRequest.getAuthInfo().isVisitorModel());
-        baseRequest.getAuthInfo().setSessionId(params.getActiveSessionId());
-        baseRequest.getAuthInfo().setOpenId(params.getShdrOpenId());
-        baseRequest.getAuthInfo().setPlatform(params.getPlatform());
-        baseRequest.getAuthInfo().setShdrVisitorId(params.getShdrVisitorId());
+//        if (StrUtil.isBlank(params.getShdrVisitorModelFlag())
+//                && StrUtil.isNotBlank(params.getActiveSessionId())) {
+//            baseRequest.getAuthInfo().setVisitorModel(false);
+//        } else {
+//            baseRequest.getAuthInfo().setVisitorModel("1".equals(params.getShdrVisitorModelFlag()));
+//        }
+//        log.info("VisitorModel:{}", baseRequest.getAuthInfo().isVisitorModel());
+//        baseRequest.getAuthInfo().setSessionId(params.getActiveSessionId());
+//        baseRequest.getAuthInfo().setOpenId(params.getShdrOpenId());
+//        baseRequest.getAuthInfo().setPlatform(params.getPlatform());
+//        baseRequest.getAuthInfo().setShdrVisitorId(params.getShdrVisitorId());
     }
 
     private static HttpServletRequest getCurrentRequest() {

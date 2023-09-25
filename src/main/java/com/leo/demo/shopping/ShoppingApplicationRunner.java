@@ -1,7 +1,9 @@
 package com.leo.demo.shopping;
 
 import com.leo.demo.shopping.models.entities.FoodFacility;
+import com.leo.demo.shopping.models.entities.MealItem;
 import com.leo.demo.shopping.service.IFoodFacilityService;
+import com.leo.demo.shopping.service.IMealItemService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.logging.log4j.util.Strings;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +17,7 @@ import java.util.List;
 @Slf4j
 public class ShoppingApplicationRunner implements ApplicationRunner {
     @Autowired
-    private IFoodFacilityService foodFacilityService;
+    private IMealItemService mealItemService;
 
     @Override
     public void run(ApplicationArguments args) throws Exception {
@@ -25,12 +27,12 @@ public class ShoppingApplicationRunner implements ApplicationRunner {
         }
         if (Strings.isNotBlank(fileName)) {
             log.info("start load data from file:", fileName);
-            foodFacilityService.initFoodFacilityDB(fileName);
+            mealItemService.initShoppingDB(fileName);
         } else {
-            Long count = foodFacilityService.getFoodFacilityCount();
+            Long count = mealItemService.getMealItemCount();
             if (count == 0) {
                 log.info("start initialize data");
-                List<FoodFacility> result = foodFacilityService.initFoodFacilityDB("");
+                List<MealItem> result = mealItemService.initShoppingDB("");
                 log.info("{} record has initialize into db.", result.size());
             }
         }

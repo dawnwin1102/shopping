@@ -16,11 +16,12 @@ import java.time.LocalDateTime;
  */
 @Entity
 @Data
+@Table(name = "tb_order")
 public class Order implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
     private Integer id;
-    private Integer orderNumber;
+    private String  orderNumber;
     //"waitPay","paid","canceled","refund","delivered"
     private String orderStatus;
     private BigDecimal totalAmount;

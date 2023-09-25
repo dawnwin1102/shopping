@@ -16,6 +16,7 @@ import java.time.LocalDateTime;
  */
 @Entity
 @Data
+@Table(name = "tb_order_meal")
 public class OrderMeal implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.AUTO)
@@ -25,4 +26,8 @@ public class OrderMeal implements Serializable {
     private Integer quantity;
     private BigDecimal unitPrice;
     private BigDecimal totalAmount;
+    private LocalDateTime createTime;
+    private LocalDateTime updateTime;
+    private String createBy;
+    private String updateBy;
 }
