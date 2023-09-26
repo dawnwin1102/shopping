@@ -20,7 +20,7 @@ This is a demo project to build web API that returns a set of food trucks.
 ```
 4. Start app with this command: ```java -jar shopping-0.0.1-SNAPSHOT.jar```
 5. Go to endpoint:https://localhost:8081/doc.html Knife4j's UI will show as blow:
-<img width="1493" alt="image" src="https://user-images.githubusercontent.com/28502900/215373215-5f18404d-1d5e-421d-912d-86b095f9a968.png">
+<img width="1531" alt="image" src="https://github.com/dawnwin1102/shopping/assets/28502900/53f958f1-87f1-461e-80b3-53a975825253">
 
 # Run project with docker
 ```
@@ -125,16 +125,19 @@ fetch("https://localhost:8088/order/paymentCallback", {
   });
 ```
 
-- /user/login this api will grant a jwt token if login success(username:leo,password:leo123)
-<img width="1136" alt="image" src="https://user-images.githubusercontent.com/28502900/215377553-78ef32f8-eb8d-4afd-9e23-6c9cf4ab152e.png">
+- /user/login this api will grant a jwt token if login success(username:leo,password:leo123/username:mike,password:mike123)
+<img width="1548" alt="image" src="https://github.com/dawnwin1102/shopping/assets/28502900/3efe8404-456f-458b-92e2-eacc2d3cee80">
 - /cart/addToCart same as  /cart/addToCart but this api need Authorization ,use /user/login get token first then call api with Authorization header.
- <img width="1134" alt="image" src="https://user-images.githubusercontent.com/28502900/215376700-fbc5fda7-9eeb-4be7-a857-9f12ec332bda.png">
+<img width="1326" alt="image" src="https://github.com/dawnwin1102/shopping/assets/28502900/8aef2bc2-2f51-4ef4-8889-bcf090c37f77">
+
+
  
 # Tradeoffs
 With a limit time budget, I think the most import points to build a web api are:
 - Unified response, global exception handle, api security, performance, traceability, simple and clear documentation
 # Future improvement
 - Separate models,service... into deferent modules not in a single application
+- Just use synchronized to hanlde threas safe, in a distribute environment we need a distribute lock mechanism like redis
 - Use standard db like Mysql/PostgreSQL/SQL Server to deal with complex data struct like Geometry
 - Use redis as a centralized cache component to set up a three level cache management to improve cache abaility
 - Add centralized log solution(Ali logs/ELK)
