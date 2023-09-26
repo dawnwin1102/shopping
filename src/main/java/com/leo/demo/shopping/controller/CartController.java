@@ -1,9 +1,12 @@
 package com.leo.demo.shopping.controller;
 
 
+import com.leo.demo.shopping.annotation.NeedLogin;
+import com.leo.demo.shopping.models.base.BaseRequest;
 import com.leo.demo.shopping.models.dto.cart.CartMeal;
 import com.leo.demo.shopping.models.dto.cart.CartRequest;
 import com.leo.demo.shopping.service.ICartService;
+import org.springframework.lang.Nullable;
 import org.springframework.web.bind.annotation.*;
 
 import java.util.List;
@@ -22,13 +25,15 @@ public class CartController {
     }
 
     @RequestMapping(value = "/addToCart", method = {RequestMethod.POST})
+    @NeedLogin
     public List<CartMeal> addToCart(@RequestBody CartRequest request) {
         return cartService.addToCart(request);
     }
 
-    @RequestMapping(value = "/getCartMealList/{mobile}", method = {RequestMethod.GET})
-    public List<CartMeal> getCartMealList(@PathVariable String mobile) {
-        return cartService.getCartMealList(mobile);
+    @RequestMapping(value = "/getCartMealList", method = {RequestMethod.POST})
+    @NeedLogin
+    public List<CartMeal> getCartMealList(@RequestBody @Nullable BaseRequest request) {
+        return cartService.getCartMealList(request);
     }
 
     @RequestMapping(value = "/clearCart/{mobile}", method = {RequestMethod.GET})

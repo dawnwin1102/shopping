@@ -14,13 +14,9 @@ import lombok.Data;
 @Data
 public class BaseRequest {
     @JsonIgnore
-    private ShdrAuthInfo authInfo = new ShdrAuthInfo();
-    @Data
-    public class ShdrAuthInfo {
-        @ApiModelProperty("Open ID：when pay channel = wechatpay public account or  jsapi, openId is required")
-        private String sessionId;
-        private String accessToken;
-    }
+    private String userName = "";
+    @JsonIgnore
+    private String mobile = "";
 
     @Override
     public String toString() {

@@ -1,6 +1,7 @@
 package com.leo.demo.shopping.service;
 
 
+import com.leo.demo.shopping.models.base.BaseRequest;
 import com.leo.demo.shopping.models.dto.cart.CartMeal;
 import com.leo.demo.shopping.models.dto.cart.CartRequest;
 
@@ -15,5 +16,5 @@ public interface ICartService {
 
     boolean clearCart(String mobile);
 
-    public List<CartMeal> getCartMealList(String mobile);
+    public List<CartMeal> getCartMealList(BaseRequest request);
 }

@@ -1,6 +1,7 @@
 package com.leo.demo.shopping.impl;
 
 import com.leo.demo.shopping.cache.CartCache;
+import com.leo.demo.shopping.models.base.BaseRequest;
 import com.leo.demo.shopping.models.dto.cart.CartMeal;
 import com.leo.demo.shopping.models.dto.cart.CartRequest;
 import com.leo.demo.shopping.service.ICartService;
@@ -25,8 +26,8 @@ public class CartServiceImpl implements ICartService {
     }
 
     @Override
-    public List<CartMeal> getCartMealList(String mobile) {
-        return cartCache.getCartMealList(mobile);
+    public List<CartMeal> getCartMealList(BaseRequest request) {
+        return cartCache.getCartMealList(request.getMobile());
     }
 
     @Override

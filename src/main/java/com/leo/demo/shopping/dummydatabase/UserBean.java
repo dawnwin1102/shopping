@@ -11,4 +11,6 @@ public class UserBean {
     private String role;
 
     private String permission;
+
+    private String mobile;
 }

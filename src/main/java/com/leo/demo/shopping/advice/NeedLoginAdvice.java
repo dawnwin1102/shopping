@@ -1,7 +1,12 @@
 package com.leo.demo.shopping.advice;
 
 import com.leo.demo.shopping.annotation.NeedLogin;
+import com.leo.demo.shopping.exception.BusinessException;
 import com.leo.demo.shopping.models.base.BaseRequest;
+import com.leo.demo.shopping.models.base.ResponseCodeEnum;
+import com.leo.demo.shopping.models.entities.User;
+import com.leo.demo.shopping.util.CookieParamUtil;
+import com.leo.demo.shopping.util.JWTUtil;
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.core.MethodParameter;
@@ -41,29 +46,16 @@ public class NeedLoginAdvice implements RequestBodyAdvice {
     @Override
     public Object afterBodyRead(Object body, HttpInputMessage inputMessage, MethodParameter parameter, Type targetType, Class<? extends HttpMessageConverter<?>> converterType) {
         BaseRequest baseRequest = (BaseRequest) body;
-//        ProfileAuthParams params = CookieParamUtil.getAuthParams(env);
-//        boolean isCartRequest = CART.equals(parameter.getMethodAnnotation(NeedLogin.class).value());
-//        // cart process not need login/visitor
-//        if (isCartRequest &&
-//                StrUtil.isBlank(params.getActiveSessionId()) &&
-//                StrUtil.isBlank(params.getShdrVisitorModelFlag())) {
-//            return baseRequest;
-//        }
-//        if ("SupportSign".equals(parameter.getMethodAnnotation(NeedLogin.class).value())
-//                && StrUtil.isNotBlank(baseRequest.getSign())) {
-//            return baseRequest;
-//        }
-//        CookieParamUtil.setGeneralInfo(baseRequest, params);
-//        if (baseRequest.getAuthInfo().isVisitorModel()) {
-//            if (StringUtils.isBlank(params.getShdrVisitorId())) {
-//                throw new BusinessException(LogModuleEnum.Service, ResponseCodeEnum.Code_1001.getCode(), ResponseCodeEnum.Code_1001.getDescription());
-//            }
-//            baseRequest.setSwid(params.getShdrVisitorId());
-//            return baseRequest;
-//        } else {
-//            profileService.setAuthInfoBySession(baseRequest, false);
-//        }
-
+        if (baseRequest == null) {
+            baseRequest = new BaseRequest();
+        }
+        var token = CookieParamUtil.getAuthToken();
+        User user = JWTUtil.getUser(token);
+        if (user == null) {
+            throw new BusinessException(ResponseCodeEnum.Code_3001);
+        }
+        baseRequest.setUserName(user.getName());
+        baseRequest.setMobile(user.getMobile());
         return baseRequest;
     }
 

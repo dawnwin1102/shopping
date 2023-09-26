@@ -22,6 +22,7 @@ public class UserService {
         user.setPassword(detail.get("password"));
         user.setRole(detail.get("role"));
         user.setPermission(detail.get("permission"));
+        user.setMobile(detail.get("mobile"));
         return user;
     }
 }

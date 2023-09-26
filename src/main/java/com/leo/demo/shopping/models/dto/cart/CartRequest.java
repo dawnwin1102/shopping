@@ -13,9 +13,6 @@ import java.util.List;
  */
 @Data
 public class CartRequest extends BaseRequest {
-    @ApiModelProperty(value = "mobile")
-    @NotBlank
-    private String mobile;
     @ApiModelProperty(value = "meal list")
     private List<CartMeal> mealItemList;
 }

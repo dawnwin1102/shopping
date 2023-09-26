@@ -5,7 +5,8 @@ public enum ResponseCodeEnum {
     Code_1000("1000", "system error"),
     Code_2001("2001", "Item list is empty"),
     Code_2002("2002", "Item check failed"),
-    Code_2003("2003", "order not found")
+    Code_2003("2003", "order not found"),
+    Code_3001("3001", "need login")
     ;
 
 

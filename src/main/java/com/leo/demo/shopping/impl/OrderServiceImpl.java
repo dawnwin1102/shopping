@@ -5,6 +5,7 @@ import com.leo.demo.shopping.dao.MealItemRepository;
 import com.leo.demo.shopping.dao.OrderMealRepository;
 import com.leo.demo.shopping.dao.OrderRepository;
 import com.leo.demo.shopping.exception.BusinessException;
+import com.leo.demo.shopping.models.base.BaseRequest;
 import com.leo.demo.shopping.models.base.ResponseCodeEnum;
 import com.leo.demo.shopping.models.dto.cart.CartMeal;
 import com.leo.demo.shopping.models.dto.order.CreateOrderRequest;
@@ -82,8 +83,8 @@ public class OrderServiceImpl implements IOrderService {
     }
 
     @Override
-    public List<OrderDetail> orderList(String mobile) {
-        var orderList = orderRepository.findByContactMobile(mobile);
+    public List<OrderDetail> orderList(BaseRequest request) {
+        var orderList = orderRepository.findByContactMobile(request.getMobile());
         List<OrderDetail> orderDetailList = new ArrayList<>();
         orderList.forEach(i -> {
             orderDetailList.add(getOrderDetail(i, null));
@@ -149,7 +150,7 @@ public class OrderServiceImpl implements IOrderService {
         newOrder.setOrderNumber(generateOrderNumber());
         newOrder.setOrderStatus(OrderStatusEnum.WaitPay.getStatus());
         newOrder.setAddress(request.getAddress());
-        newOrder.setContactMobile(request.getContactMobile());
+        newOrder.setContactMobile(request.getMobile());
         newOrder.setEmail(request.getEmail());
         newOrder.setUserName(request.getUserName());
         //set default expire time for 15 minutes

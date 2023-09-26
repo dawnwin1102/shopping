@@ -1,6 +1,8 @@
 package com.leo.demo.shopping.controller;
 
 
+import com.leo.demo.shopping.annotation.NeedLogin;
+import com.leo.demo.shopping.models.base.BaseRequest;
 import com.leo.demo.shopping.models.dto.order.CreateOrderRequest;
 import com.leo.demo.shopping.models.dto.order.OrderDetail;
 import com.leo.demo.shopping.models.dto.order.PaymentCallbackRequest;
@@ -23,6 +25,7 @@ public class OrderController {
     }
 
     @RequestMapping(value = "/createOrder", method = {RequestMethod.POST})
+    @NeedLogin
     public OrderDetail createOrder(@RequestBody CreateOrderRequest request) {
         return orderService.createOrder(request);
     }
@@ -32,9 +35,10 @@ public class OrderController {
         return orderService.orderDetail(orderId);
     }
 
-    @RequestMapping(value = "/orderList/{mobile}", method = {RequestMethod.GET})
-    public List<OrderDetail> orderList(@PathVariable String mobile) {
-        return orderService.orderList(mobile);
+    @RequestMapping(value = "/orderList", method = {RequestMethod.POST})
+    @NeedLogin
+    public List<OrderDetail> orderList(@RequestBody BaseRequest request) {
+        return orderService.orderList(request);
     }
 
     @RequestMapping(value = "/cancel/{orderId}", method = {RequestMethod.GET})

@@ -1,6 +1,7 @@
 package com.leo.demo.shopping.service;
 
 
+import com.leo.demo.shopping.models.base.BaseRequest;
 import com.leo.demo.shopping.models.dto.order.CreateOrderRequest;
 import com.leo.demo.shopping.models.dto.order.OrderDetail;
 import com.leo.demo.shopping.models.dto.order.PaymentCallbackRequest;
@@ -20,7 +21,7 @@ public interface IOrderService {
 
     OrderDetail orderDetail(Integer orderId);
 
-    List<OrderDetail> orderList(String mobile);
+    List<OrderDetail> orderList(BaseRequest request);
 
     boolean cancel(Integer orderId);
 

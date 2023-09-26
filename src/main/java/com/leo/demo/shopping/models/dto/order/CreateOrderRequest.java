@@ -18,9 +18,6 @@ public class CreateOrderRequest extends BaseRequest {
     private String email;
     private String address;
     private String userName;
-    @ApiModelProperty(value = "Contact Mobile")
-    @NotBlank
-    private String contactMobile;
     @ApiModelProperty(value = "meal List")
     @NotEmpty
     List<CartMeal> mealList;
