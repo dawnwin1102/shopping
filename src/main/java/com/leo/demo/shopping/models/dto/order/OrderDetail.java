@@ -1,11 +1,8 @@
 package com.leo.demo.shopping.models.dto.order;
 
-import com.leo.demo.shopping.models.base.BaseRequest;
-import com.leo.demo.shopping.models.dto.cart.CartMeal;
-import io.swagger.annotations.ApiModelProperty;
+import com.leo.demo.shopping.models.entities.OrderMeal;
 import lombok.Data;
 
-import javax.validation.constraints.NotBlank;
 import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.List;
@@ -16,6 +13,7 @@ import java.util.List;
  */
 @Data
 public class OrderDetail {
+    private Integer id;
     private String orderNumber;
     private String contactMobile;
     private BigDecimal totalAmount;
@@ -25,5 +23,5 @@ public class OrderDetail {
     private String email;
     private String transactionNo;
     private LocalDateTime payTime;
-    private List<CartMeal> mealItemList;
+    private List<OrderMeal> mealItemList;
 }

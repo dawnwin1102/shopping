@@ -1,8 +1,6 @@
 package com.leo.demo.shopping;
 
-import com.leo.demo.shopping.models.entities.FoodFacility;
 import com.leo.demo.shopping.models.entities.MealItem;
-import com.leo.demo.shopping.service.IFoodFacilityService;
 import com.leo.demo.shopping.service.IMealItemService;
 import lombok.extern.slf4j.Slf4j;
 import org.apache.logging.log4j.util.Strings;

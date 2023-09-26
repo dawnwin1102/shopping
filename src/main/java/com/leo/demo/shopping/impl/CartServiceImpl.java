@@ -8,7 +8,6 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
 import java.util.List;
-import java.util.Set;
 
 /**
  * @author leo
@@ -26,12 +25,12 @@ public class CartServiceImpl implements ICartService {
     }
 
     @Override
-    public List<CartMeal> getAllCartMealList(String cartId) {
-        return cartCache.getAllCartMealList(cartId);
+    public List<CartMeal> getCartMealList(String mobile) {
+        return cartCache.getCartMealList(mobile);
     }
 
     @Override
-    public boolean clearCart(CartRequest request) {
-        return false;
+    public boolean clearCart(String mobile) {
+        return cartCache.clearCart(mobile);
     }
 }

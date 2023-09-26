@@ -1,13 +1,9 @@
 package com.leo.demo.shopping.impl;
 
-import cn.hutool.core.lang.Pair;
-import cn.hutool.core.lang.Tuple;
-import com.leo.demo.shopping.cache.FoodFacilityCache;
 import com.leo.demo.shopping.dao.MealItemRepository;
+import com.leo.demo.shopping.exception.BusinessException;
 import com.leo.demo.shopping.models.dto.cart.CartMeal;
 import com.leo.demo.shopping.models.dto.cart.CartRequest;
-import com.leo.demo.shopping.models.dto.food.FoodFacilityPageRequest;
-import com.leo.demo.shopping.models.entities.FoodFacility;
 import com.leo.demo.shopping.models.entities.MealItem;
 import com.leo.demo.shopping.service.IMealItemService;
 import com.opencsv.bean.CsvToBeanBuilder;
@@ -19,12 +15,7 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.core.io.ClassPathResource;
-import org.springframework.data.domain.Page;
-import org.springframework.data.domain.PageRequest;
-import org.springframework.data.domain.Pageable;
 import org.springframework.stereotype.Service;
-import reactor.util.function.Tuple2;
-import reactor.util.function.Tuple3;
 import reactor.util.function.Tuple4;
 import reactor.util.function.Tuples;
 
@@ -62,15 +53,8 @@ public class MealItemServiceImpl implements IMealItemService {
     }
 
     @Override
-    public Page<MealItem> getMealItemlist(FoodFacilityPageRequest request) {
-        Pageable pageable = PageRequest.of(request.getPage(), request.getSize());
-        return mealItemRepository.findAll(pageable);
-    }
-
-
-    @Override
     public MealItem getMealItemDetail(Integer id) {
-        MealItem res = mealItemRepository.findById(id).get();
+        MealItem res = mealItemRepository.findById(id).orElse(new MealItem());
         return res;
     }
 
@@ -81,7 +65,7 @@ public class MealItemServiceImpl implements IMealItemService {
 
     @Override
     public Map<Integer, CartMeal> checkMealItem(CartRequest request) {
-        Map<Integer, CartMeal> map = getMealItemMap(request);
+        Map<Integer, CartMeal> map = getMealItemMap(request.getMealItemList());
         List<Integer> mealIdList = request.getMealItemList().stream().map(CartMeal::getMealId).collect(Collectors.toList());
         var dbMealItemList = mealItemRepository.findAllById(mealIdList);
         for (var entry : map.entrySet()) {
@@ -97,9 +81,9 @@ public class MealItemServiceImpl implements IMealItemService {
     }
 
     @NotNull
-    private Map<Integer, CartMeal> getMealItemMap(CartRequest request) {
+    private Map<Integer, CartMeal> getMealItemMap(List<CartMeal> mealList) {
         Map<Integer, CartMeal> map = new HashMap<>();
-        request.getMealItemList().forEach(meal -> {
+        mealList.forEach(meal -> {
             var exitMeal = map.get(meal.getMealId());
             if (exitMeal == null) {
                 map.put(meal.getMealId(), meal);
@@ -112,13 +96,13 @@ public class MealItemServiceImpl implements IMealItemService {
 
     /**
      *
-     * @param request
+     * @param mealList
      * @return checkResult, request orderMeal map,dbMealItemList
      */
     @Override
-    public Tuple4<Boolean, Map<Integer, CartMeal>, List<MealItem>, BigDecimal> checkOrderMealItem(CartRequest request) {
-        Map<Integer, CartMeal> map = getMealItemMap(request);
-        List<Integer> mealIdList = request.getMealItemList().stream().map(CartMeal::getMealId).collect(Collectors.toList());
+    public Tuple4<Boolean, Map<Integer, CartMeal>, List<MealItem>, BigDecimal> checkOrderMealItem(List<CartMeal> mealList) {
+        Map<Integer, CartMeal> map = getMealItemMap(mealList);
+        List<Integer> mealIdList = mealList.stream().map(CartMeal::getMealId).collect(Collectors.toList());
         BigDecimal totalAmount = BigDecimal.ZERO;
         var dbMealItemList = mealItemRepository.findAllById(mealIdList);
         for (var meal : map.values()) {
@@ -139,5 +123,10 @@ public class MealItemServiceImpl implements IMealItemService {
         }
 
         return Tuples.of(true, map, dbMealItemList, totalAmount);
+    }
+
+    @Override
+    public List<MealItem> getMealList() {
+        return mealItemRepository.findAll();
     }
 }

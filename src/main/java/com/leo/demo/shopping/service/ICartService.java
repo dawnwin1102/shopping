@@ -5,7 +5,6 @@ import com.leo.demo.shopping.models.dto.cart.CartMeal;
 import com.leo.demo.shopping.models.dto.cart.CartRequest;
 
 import java.util.List;
-import java.util.Set;
 
 /**
  * @author leo
@@ -14,7 +13,7 @@ import java.util.Set;
 public interface ICartService {
     List<CartMeal> addToCart(CartRequest request);
 
-    boolean clearCart(CartRequest request);
+    boolean clearCart(String mobile);
 
-    public List<CartMeal> getAllCartMealList(String cartId);
+    public List<CartMeal> getCartMealList(String mobile);
 }

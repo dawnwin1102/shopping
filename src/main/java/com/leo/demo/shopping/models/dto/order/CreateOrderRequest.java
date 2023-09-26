@@ -6,6 +6,7 @@ import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
 import javax.validation.constraints.NotBlank;
+import javax.validation.constraints.NotEmpty;
 import java.util.List;
 
 /**
@@ -14,10 +15,13 @@ import java.util.List;
  */
 @Data
 public class CreateOrderRequest extends BaseRequest {
+    private String email;
+    private String address;
+    private String userName;
     @ApiModelProperty(value = "Contact Mobile")
     @NotBlank
     private String contactMobile;
-    @ApiModelProperty(value = "cart id")
-    @NotBlank
-    private String cartId;
+    @ApiModelProperty(value = "meal List")
+    @NotEmpty
+    List<CartMeal> mealList;
 }

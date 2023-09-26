@@ -1,14 +1,11 @@
 package com.leo.demo.shopping.models.dto.cart;
 
 import com.leo.demo.shopping.models.base.BaseRequest;
-import com.leo.demo.shopping.models.entities.MealItem;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
 
-import javax.persistence.Column;
 import javax.validation.constraints.Min;
 import java.math.BigDecimal;
-import java.util.List;
 
 /**
  * @author leo

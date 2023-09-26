@@ -1,8 +1,6 @@
 package com.leo.demo.shopping.controller;
 
 
-import com.leo.demo.shopping.controller.base.BaseApiController;
-import com.leo.demo.shopping.models.base.BaseResponse;
 import com.leo.demo.shopping.models.dto.home.HomeRequest;
 import com.leo.demo.shopping.models.dto.home.HomeResponse;
 import com.leo.demo.shopping.service.IHomeService;

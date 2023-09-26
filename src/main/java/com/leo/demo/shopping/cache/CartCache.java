@@ -2,19 +2,15 @@ package com.leo.demo.shopping.cache;
 
 import com.github.benmanes.caffeine.cache.Cache;
 import com.github.benmanes.caffeine.cache.Caffeine;
-import com.leo.demo.shopping.dao.FoodFacilityRepository;
-import com.leo.demo.shopping.dao.MealItemRepository;
 import com.leo.demo.shopping.models.dto.cart.CartMeal;
 import com.leo.demo.shopping.models.dto.cart.CartRequest;
-import com.leo.demo.shopping.models.dto.food.FoodFacilityRequest;
-import com.leo.demo.shopping.models.entities.FoodFacility;
 import com.leo.demo.shopping.service.IMealItemService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import java.util.*;
-import java.util.concurrent.TimeUnit;
-import java.util.stream.Collector;
+import java.util.ArrayList;
+import java.util.List;
+import java.util.Map;
 import java.util.stream.Collectors;
 
 @Component
@@ -33,7 +29,7 @@ public class CartCache {
 
     // use synchronized for thread safe ,in a distribute enviroment need use distribute lock like redis
     public synchronized List<CartMeal> addCartMeal(CartRequest request) {
-        String cacheKey = getCacheKey(request.getCartId());
+        String cacheKey = getCacheKey(request.getMobile());
         Map<Integer, CartMeal> validItemMap = mealItemService.checkMealItem(request);
         List<CartMeal> requstCartMealList = validItemMap.values().stream().collect(Collectors.toList());
         List<CartMeal> cartList = cache.getIfPresent(cacheKey);
@@ -54,9 +50,9 @@ public class CartCache {
         return cartList;
     }
 
-    public List<CartMeal> getAllCartMealList(String cartId) {
-        String cacheKey = getCacheKey(cartId);
-        List<CartMeal> list = (List<CartMeal>) cache.getIfPresent(cacheKey);
+    public List<CartMeal> getCartMealList(String mobile) {
+        String cacheKey = getCacheKey(mobile);
+        List<CartMeal> list = cache.getIfPresent(cacheKey);
         if (list == null || list.isEmpty()) {
             return new ArrayList<>();
         }
@@ -64,7 +60,14 @@ public class CartCache {
         return list;
     }
 
+    public boolean clearCart(String mobile) {
+        String cacheKey = getCacheKey(mobile);
+        cache.invalidate(cacheKey);
+        return true;
+    }
+
     private String getCacheKey(String cartId) {
         return String.format(CARTKEY + cartId);
     }
+
 }

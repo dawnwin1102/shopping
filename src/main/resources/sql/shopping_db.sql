@@ -7,6 +7,7 @@ tb_meal_item (name);
 -- tb_order definition
 
 CREATE TABLE tb_order (id integer not null, address varchar(255), contact_mobile varchar(255), create_by varchar(255), create_time datetime, email varchar(255), order_number integer, order_status varchar(255), pay_time datetime, total_amount numeric(19,2), transaction_no varchar(255), update_by varchar(255), update_time datetime, user_name varchar(255), primary key (id));
+CREATE UNIQUE INDEX idx_order_number ON tb_order (order_number);
 
 
 -- tb_order_meal definition

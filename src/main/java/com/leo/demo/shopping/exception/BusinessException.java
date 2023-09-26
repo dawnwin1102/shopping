@@ -1,5 +1,6 @@
 package com.leo.demo.shopping.exception;
 
+import com.leo.demo.shopping.models.base.ResponseCodeEnum;
 import lombok.Data;
 
 /**
@@ -18,6 +19,11 @@ public class BusinessException extends RuntimeException {
 
     public BusinessException() {
 
+    }
+
+    public BusinessException(ResponseCodeEnum responseCodeEnum) {
+        super(responseCodeEnum.getMessage());
+        this.code = responseCodeEnum.getCode();
     }
 
     public BusinessException(String code, String message) {

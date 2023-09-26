@@ -1,10 +1,8 @@
 package com.leo.demo.shopping.models.dto.cart;
 
 import com.leo.demo.shopping.models.base.BaseRequest;
-import com.leo.demo.shopping.models.entities.MealItem;
 import io.swagger.annotations.ApiModelProperty;
 import lombok.Data;
-import lombok.NonNull;
 
 import javax.validation.constraints.NotBlank;
 import java.util.List;
@@ -15,9 +13,9 @@ import java.util.List;
  */
 @Data
 public class CartRequest extends BaseRequest {
-    @ApiModelProperty(value = "cart ID")
+    @ApiModelProperty(value = "mobile")
     @NotBlank
-    private String cartId;
+    private String mobile;
     @ApiModelProperty(value = "meal list")
     private List<CartMeal> mealItemList;
 }
