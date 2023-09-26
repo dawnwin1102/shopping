@@ -1,5 +1,5 @@
 # Purpose
-This is a demo project to build web API that returns a set of food trucks.
+This is a demo project to build web API for a shopping process.
 ## Description:
 - A single spring boot application load input csv files into db and provide web apis.
 ## Features
