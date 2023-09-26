@@ -22,6 +22,8 @@ public class OrderDetail {
     private String address;
     private String email;
     private String transactionNo;
+    private String cardNo;
+    private String CVC;
     private LocalDateTime payTime;
     private List<OrderMeal> mealItemList;
 }

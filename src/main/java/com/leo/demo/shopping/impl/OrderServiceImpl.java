@@ -41,6 +41,8 @@ import java.util.stream.Collectors;
 public class OrderServiceImpl implements IOrderService {
 
     private static final String ORDER_LOCK = "ORDER_LOCK";
+    public static final String SUCCESS = "success";
+    public static final String EXPIRED = "expired";
 
     @Autowired
     ICartService cartService;
@@ -108,18 +110,20 @@ public class OrderServiceImpl implements IOrderService {
     public synchronized boolean paymentCallback(PaymentCallbackRequest request) {
         var order = orderRepository.findById(request.getOrderId());
         //  set payinfo to order:transactionNo,payTime,orderStatus,cardNo,CVC
-        if (request.getPayStatus().equals("success")) {
+        if (request.getPayStatus().equals(SUCCESS)) {
             if (order.get().getOrderStatus().equals(OrderStatusEnum.WaitPay.getStatus())) {
                 order.get().setOrderStatus(OrderStatusEnum.PaySuccess.getStatus());
                 order.get().setPayTime(LocalDateTime.now());
                 order.get().setCardNo(request.getCardNo());
                 order.get().setCVC(request.getCVC());
                 order.get().setUpdateTime(LocalDateTime.now());
+                orderRepository.saveAndFlush(order.get());
             }
-        } else if (request.getPayStatus().equals("expired")) {
+        } else if (request.getPayStatus().equals(EXPIRED)) {
             if (order.get().getOrderStatus().equals(OrderStatusEnum.WaitPay.getStatus())) {
                 order.get().setOrderStatus(OrderStatusEnum.Cancel.getStatus());
                 order.get().setUpdateTime(LocalDateTime.now());
+                orderRepository.saveAndFlush(order.get());
             }
         }
 
@@ -140,6 +144,8 @@ public class OrderServiceImpl implements IOrderService {
         orderDetail.setEmail(order.getEmail());
         orderDetail.setUserName(order.getUserName());
         orderDetail.setTotalAmount(order.getTotalAmount());
+        orderDetail.setCardNo(order.getCardNo());
+        orderDetail.setCVC(order.getCVC());
         return orderDetail;
     }
 
